@@ -1,0 +1,32 @@
+{
+  "name": "d2-guide-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that helps new and returning Destiny 2 players understand their account, gear and the game",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "login": "node dist/login.js",
+    "start": "node --max-old-space-size=4096 dist/index.js",
+    "dev": "tsx src/index.ts",
+    "smoke": "tsx test/smoke.ts"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.31.0",
+    "dotenv": "^18.0.5",
+    "selfsigned": "^5.5.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "type": "module",
+  "bin": {
+    "d2-guide-mcp": "dist/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
